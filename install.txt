@@ -1,0 +1,38 @@
+1. Project Setup:
+   npm init -y
+
+2. Install Dependencies:
+   npm i express dotenv
+
+3. Install Dev Dependencies:
+   npm i -D typescript tsx @types/node @types/express
+
+4. Install Testing Tools:
+   npm i -D jest ts-jest @jest/globals supertest @types/jest @types/supertest
+
+5. Initialize TypeScript:
+   npx tsc --init
+
+6. Configuration:
+   - Rename jest.config.js to jest.config.cjs (if exists)
+   - Setup jest.config.cjs for ESM support
+   - Update package.json scripts for tsx and ESM Jest
+
+7. Scripts in package.json:
+   "dev": "tsx watch src/index.ts",
+   "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+   "build": "tsc --build",
+   "start": "node dist/index.js"
+
+8. In tsconfig.json:
+   "rootDir": "./src",
+   "outDir": "./dist",
+   "module": "nodenext",
+   "target": "esnext",
+   "types": ["jest", "node"]
+
+9. Run Project:
+   - Development: npm run dev
+   - Testing: npm test
+   - Build: npm run build
+   - Start Production: npm start

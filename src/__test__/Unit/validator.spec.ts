@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import { isValidatorEmail } from "../../utils/validator.js";
+import {  isValidatorEmail } from "../../utils/validator.js";
 
 describe("isValidatorEmail", () => {
     test("should return false for non-string input", () => {
@@ -13,3 +13,5 @@ describe("isValidatorEmail", () => {
     });
     
 });
+
+

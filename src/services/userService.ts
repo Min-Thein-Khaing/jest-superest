@@ -1,12 +1,4 @@
-import "dotenv/config";
-import { withAccelerate } from "@prisma/extension-accelerate";
-import { PrismaClient } from "../generated/prisma";
-
-
-// ပိုပြီး သေချာအောင် URL ကို တိုက်ရိုက် ပေးလိုက်ပါ
-const prisma = new PrismaClient({
-  accelerateUrl: process.env.DATABASE_URL as string,
-}).$extends(withAccelerate());
+import prisma from "../lib/prisma.js";
 
 
 export const UserService = {

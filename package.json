@@ -8,10 +8,9 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc --build",
     "start": "node dist/index.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/__test__/Unit",
     "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/__test__/Integeration",
-    "test:e2e": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/__test__/E2E"
+    "test:e2e": "dotenv -e .env.test -- node --experimental-vm-modules node_modules/jest/bin/jest.js src/__test__/E2E"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +30,7 @@
     "@types/node": "^25.6.0",
     "@types/pg": "^8.20.0",
     "@types/supertest": "^7.2.0",
+    "dotenv-cli": "^11.0.0",
     "jest": "^30.3.0",
     "prisma": "^7.7.0",
     "supertest": "^7.2.2",

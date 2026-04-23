@@ -36,3 +36,8 @@
    - Testing: npm test
    - Build: npm run build
    - Start Production: npm start
+
+
+   postgres user name : postgres
+   postgres password : [asdffdsa]
+   
